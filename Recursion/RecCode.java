@@ -7,8 +7,13 @@ public class RecQue {
         System.out.println("Enter any no: ");
         Scanner sc = new Scanner(System.in);
         int n= sc.nextInt();
-        OneToN(n);
-        NtoOne(n);
+        //OneToN(n);
+        
+        //NtoOne(n);
+        
+        //int result = SumOf1toN(n);
+        //System.out.println("Sum is "+ result);
+        
     }
 
     // 1 to N numbers
@@ -28,5 +33,16 @@ public class RecQue {
         System.out.println(n);
         NtoOne(n-1);
     }
+
+        // Sum of 1 to N
+
+    static int SumOf1toN(int n){
+        if(n==0){
+            return 0;
+        }
+        return n + SumOf1toN(n-1);
+    }
+
+    
 }
 
