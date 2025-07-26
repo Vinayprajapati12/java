@@ -23,6 +23,12 @@ public class RecQue {
         int result = powerOfNum(base, exponent);
         System.out.println(base + " raised to the power " + exponent + " is: " + result);*/
 
+        /* 6.if (isEven(n)) {
+            System.out.println(n + " is Even");
+        } else {
+            System.out.println(n + " is Odd");
+        } */
+
         
         
         
@@ -71,7 +77,13 @@ public class RecQue {
         return base * powerOfNum(base, exponent - 1);
     }
 
-    
+    // Odd Even
+
+    static boolean isEven(int n) {
+        if (n == 0) return true;     // base case for even
+        if (n == 1) return false;    // base case for odd
+        return isEven(n - 2);        // subtract 2 and check again
+    }
 
     
 }
