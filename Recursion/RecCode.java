@@ -12,11 +12,11 @@ public class RecQue {
         // 2.NtoOne(n);
         
         // 3.int result = SumOf1toN(n);
-        // 4.System.out.println("Sum is "+ result);
+        // System.out.println("Sum is "+ result);
 
-        // 5.System.out.println(n + " Factorial is " + Factorial(n));
+        // 4.System.out.println(n + " Factorial is " + Factorial(n));
 
-        /* 6.System.out.print("Enter base: ");
+        /* 5.System.out.print("Enter base: ");
         int base = sc.nextInt();
         System.out.print("Enter exponent: ");
         int exponent = sc.nextInt();
