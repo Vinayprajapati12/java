@@ -13,6 +13,8 @@ public class RecQue {
         
         //int result = SumOf1toN(n);
         //System.out.println("Sum is "+ result);
+
+        //System.out.println(n + " Factorial is " + Factorial(n));
         
     }
 
@@ -41,6 +43,13 @@ public class RecQue {
             return 0;
         }
         return n + SumOf1toN(n-1);
+    }
+
+    // Factorial of a number
+
+    static int Factorial(int n){
+        if(n==1) return 1;
+        return n * Factorial(n-1);
     }
 
     
