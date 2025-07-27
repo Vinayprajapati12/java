@@ -10,6 +10,9 @@ public class digitsAndNumbers {
 
         // 1.int count = countDigits(n);
         //System.out.println("Number of digits: " + count);
+
+        // 2.int sum = sumOfDigits(n);
+        //System.out.println("Sum of digits: " + sum);
     }
 
     // Count number of digits in a number
@@ -20,5 +23,11 @@ public class digitsAndNumbers {
     }
 
 
+    // Sum of digits of a number
+
+    static int sumOfDigits(int n) {
+        if (n == 0) return 0;
+        return (n % 10) + sumOfDigits(n / 10);
+    }
 }
 
