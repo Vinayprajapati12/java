@@ -22,6 +22,15 @@ public class digitsAndNumbers {
 
         // 4. reverseNumber(n);
         // System.out.println("Reversed number: " + reverse);
+
+        /* 5. int reversed = reverse(n, 0);
+
+        if (n == reversed) {
+            System.out.println(n + " is a Palindrome");
+        } else {
+            System.out.println(n + " is NOT a Palindrome");
+        }*/
+        
     }
 
     // Count number of digits in a number
@@ -53,6 +62,17 @@ public class digitsAndNumbers {
         if (n == 0) return;
         reverse = reverse * 10 + n % 10;
         reverseNumber(n / 10);
+    }
+
+    // Check if a number is palindrome
+
+    static int reverse(int n, int rev) {
+        if (n == 0) {
+            return rev;
+        }
+        int digit = n % 10;
+        rev = rev * 10 + digit;
+        return reverse(n / 10, rev);
     }
 }
 
