@@ -29,6 +29,9 @@ public class RecQue {
             System.out.println(n + " is Odd");
         } */
 
+
+        // 7. Even Numbers
+       // printEven(1, n);
         
         
         
@@ -83,6 +86,14 @@ public class RecQue {
         if (n == 0) return true;     // base case for even
         if (n == 1) return false;    // base case for odd
         return isEven(n - 2);        // subtract 2 and check again
+    }
+
+    // Even Numbers
+
+    static void printEven(int i, int n) {
+        if (i > n) return;
+        if (i % 2 == 0) System.out.println(i);
+        printEven(i + 1, n);
     }
 
     
