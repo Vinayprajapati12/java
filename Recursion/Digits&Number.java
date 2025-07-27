@@ -13,6 +13,9 @@ public class digitsAndNumbers {
 
         // 2.int sum = sumOfDigits(n);
         //System.out.println("Sum of digits: " + sum);
+
+        // 3.int product = productOfDigits(n);
+        // System.out.println("Product of digits: " + product);
     }
 
     // Count number of digits in a number
@@ -28,6 +31,14 @@ public class digitsAndNumbers {
     static int sumOfDigits(int n) {
         if (n == 0) return 0;
         return (n % 10) + sumOfDigits(n / 10);
+    }
+
+    // Product of digits
+
+    static int productOfDigits(int n) {
+        if (n == 0) return 0;       // Edge case: if the number is 0, return 0
+        if (n < 10) return n;       // Base case: single digit
+        return (n % 10) * productOfDigits(n / 10);
     }
 }
 
