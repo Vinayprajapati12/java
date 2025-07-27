@@ -33,7 +33,8 @@ public class RecQue {
         // 7. Even Numbers
        // printEven(1, n);
         
-        
+        // 8. Odd Numbers
+       // printOdd(1,n);
         
     }
 
@@ -96,6 +97,14 @@ public class RecQue {
         printEven(i + 1, n);
     }
 
+
+    // Print Odd numbers From 1 to N
+
+    static void printOdd(int i, int n) {
+        if (i > n) return;
+        if (i % 2 != 0) System.out.println(i);
+        printOdd(i + 1, n);
+    }
     
 }
 
