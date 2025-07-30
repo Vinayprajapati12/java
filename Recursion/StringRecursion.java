@@ -17,6 +17,10 @@ public class stringRecursion {
         } else {
             System.out.println("Not Palindrome");
         }*/
+
+        /* 4. int count = countVowels(str, 0);
+        System.out.println("Number of vowels: " + count); */
+        
     }
 
 
@@ -53,6 +57,20 @@ public class stringRecursion {
             return false; // mismatch found
         }
         return isPalindrome(str, start + 1, end - 1); // check inward
+    }
+
+    // Count vowels in a string
+    
+    static int countVowels(String str, int index) {
+        if (index == str.length()) {
+            return 0;
+        }
+
+        char ch = Character.toLowerCase(str.charAt(index));
+
+        int count = (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') ? 1 : 0;
+
+        return count + countVowels(str, index + 1);
     }
 }
 
