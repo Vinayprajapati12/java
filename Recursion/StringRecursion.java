@@ -11,6 +11,12 @@ public class stringRecursion {
         // 1. printChars(str, 0);
         
         // 2. reversePrint(str, 0);
+
+        // 3. if (isPalindrome(str, 0, str.length() - 1)) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not Palindrome");
+        }
     }
 
 
@@ -34,6 +40,19 @@ public class stringRecursion {
 
         reversePrint(str, i + 1); // go to the end first
         System.out.println(str.charAt(i)); // print on returning
+    }
+
+
+    //  Check if a string is palindrome
+
+    static boolean isPalindrome(String str, int start, int end) {
+        if (start >= end) {
+            return true; // middle reached
+        }
+        if (str.charAt(start) != str.charAt(end)) {
+            return false; // mismatch found
+        }
+        return isPalindrome(str, start + 1, end - 1); // check inward
     }
 }
 
