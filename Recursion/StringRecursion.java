@@ -10,6 +10,7 @@ public class stringRecursion {
 
         // 1. printChars(str, 0);
         
+        // 2. reversePrint(str, 0);
     }
 
 
@@ -21,6 +22,18 @@ public class stringRecursion {
         }
         System.out.println(str.charAt(index));
         printChars(str, index + 1);
+    }
+
+
+     // Reverse a string
+
+    static void reversePrint(String str, int i) {
+        if (i == str.length()) {
+            return;
+        }
+
+        reversePrint(str, i + 1); // go to the end first
+        System.out.println(str.charAt(i)); // print on returning
     }
 }
 
