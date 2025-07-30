@@ -12,11 +12,11 @@ public class stringRecursion {
         
         // 2. reversePrint(str, 0);
 
-        // 3. if (isPalindrome(str, 0, str.length() - 1)) {
+        /* 3. if (isPalindrome(str, 0, str.length() - 1)) {
             System.out.println("Palindrome");
         } else {
             System.out.println("Not Palindrome");
-        }
+        }*/
     }
 
 
