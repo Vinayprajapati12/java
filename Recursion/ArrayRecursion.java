@@ -23,6 +23,16 @@ public class arrayRecursion {
             System.out.println("Element not found.");
         }*/
 
+
+        /*int[] arr = {3, 5, 7, 5, 9};
+        int target = 5;
+        int index = findFirstIndex(arr, 0, target);
+
+        if (index != -1) {
+            System.out.println("First occurrence at index: " + index);
+        } else {
+            System.out.println("Element not found.");
+        }*/
         
     }
 
@@ -85,5 +95,22 @@ public class arrayRecursion {
 
         // Recursive call
         return linearSearch(arr, index + 1, target);
+    }
+
+    // 5. Find first index of a target element
+
+    static int findFirstIndex(int[] arr, int index, int target) {
+        // Base case: reached end, not found
+        if (index == arr.length) {
+            return -1;
+        }
+
+        // Match found
+        if (arr[index] == target) {
+            return index;
+        }
+
+        // Check next
+        return findFirstIndex(arr, index + 1, target);
     }
 }
