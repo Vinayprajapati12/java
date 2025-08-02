@@ -8,6 +8,10 @@ public class arrayRecursion {
         /*int[] arr = {5, 10, 15};
         int sum = findSum(arr, 0);
         System.out.println("Sum = " + sum);*/
+
+        /*int[] arr = {2, 3, 6, 9, 11};
+        boolean isSorted = isSorted(arr, 0);
+        System.out.println("Array is sorted: " + isSorted);*/
     }
 
 
@@ -35,5 +39,22 @@ public class arrayRecursion {
         }
         // Recursive case
         return arr[index] + findSum(arr, index + 1);
+    }
+
+    // 3. Check if array is sorted (ascending)
+
+    static boolean isSorted(int[] arr, int index) {
+        // Base case: if we reach second last element
+        if (index == arr.length - 1) {
+            return true;
+        }
+
+        // If current element is greater than next, not sorted
+        if (arr[index] > arr[index + 1]) {
+            return false;
+        }
+
+        // Check rest of the array
+        return isSorted(arr, index + 1);
     }
 }
