@@ -23,6 +23,12 @@ public class logicalAndPattern {
         int num = sc.nextInt();
         System.out.print("Binary of " + num + " is: ");
         printBinary(num);*/
+
+        /*Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        int steps = countSteps(n);
+        System.out.println("Steps to reduce " + n + " to 0: " + steps);*/
     }
 
 
@@ -59,5 +65,14 @@ public class logicalAndPattern {
         }
         printBinary(n / 2);          // recursive call
         System.out.print(n % 2);     // print remainder
+    }
+
+     // 4. Count steps to reduce number to 0 (n - 1 each time)
+
+    static int countSteps(int n) {
+        if (n == 0) {
+            return 0; // base case
+        }
+        return 1 + countSteps(n - 1); // each step subtracts 1
     }
 }
