@@ -12,6 +12,18 @@ public class arrayRecursion {
         /*int[] arr = {2, 3, 6, 9, 11};
         boolean isSorted = isSorted(arr, 0);
         System.out.println("Array is sorted: " + isSorted);*/
+
+        /*int[] arr = {4, 8, 15, 23, 42};
+        int target = 15;
+        int index = linearSearch(arr, 0, target);
+
+        if (index != -1) {
+            System.out.println("Element found at index: " + index);
+        } else {
+            System.out.println("Element not found.");
+        }*/
+
+        
     }
 
 
@@ -56,5 +68,22 @@ public class arrayRecursion {
 
         // Check rest of the array
         return isSorted(arr, index + 1);
+    }
+
+    // 4. Linear search recursively
+
+    static int linearSearch(int[] arr, int index, int target) {
+        // Base case: not found
+        if (index == arr.length) {
+            return -1;
+        }
+
+        // If found
+        if (arr[index] == target) {
+            return index;
+        }
+
+        // Recursive call
+        return linearSearch(arr, index + 1, target);
     }
 }
