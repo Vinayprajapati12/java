@@ -18,7 +18,11 @@ public class logicalAndPattern {
         int n = sc.nextInt();
         printTriangle(n, 0);*/
 
-        
+        /*Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        System.out.print("Binary of " + num + " is: ");
+        printBinary(num);*/
     }
 
 
@@ -45,5 +49,15 @@ public class logicalAndPattern {
             printTriangle(row - 1, 0);
             System.out.println();
         }
+    }
+
+    // 3. Print binary representation of a number
+
+    static void printBinary(int n) {
+        if (n == 0) {
+            return;
+        }
+        printBinary(n / 2);          // recursive call
+        System.out.print(n % 2);     // print remainder
     }
 }
