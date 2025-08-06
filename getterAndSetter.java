@@ -1,5 +1,8 @@
 package oop;
 
+/* Shortcut for getter and setter :
+ three dot -> code -> generate -> getter and setter */
+
 class stud {
     // private variables (encapsulation)
     private int roll;
