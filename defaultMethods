@@ -1,0 +1,72 @@
+package oop;
+
+// Camera interface
+interface mycamera {
+    void takeSnap(); // abstract method
+    void recordVideo(); // abstract method
+
+    // private helper method (only used inside this interface)
+    private void greet() {
+        System.out.println("good morning");
+    }
+
+    // default method with implementation
+    default void record4kVideo() {
+        greet(); // call private method
+        System.out.println("record in 4k");
+    }
+}
+
+// WiFi interface
+interface mywifi {
+    String[] getNetworks(); // abstract method
+    void connectToNetwork(String network); // abstract method
+}
+
+// Basic cellphone class
+class myCellPhone {
+    void callNumber(int phoneNumber) { // method to call a number
+        System.out.println("Calling " + phoneNumber);
+    }
+    void pickCall() { // method to pick a call
+        System.out.println(" connecting... ");
+    }
+}
+
+// Smartphone class extends cellphone and implements both interfaces
+class mySmartPhone extends myCellPhone implements mywifi, mycamera {
+    
+    // Implement camera methods
+    public void takeSnap() {
+        System.out.println("taking snap");
+    }
+    public void recordVideo() {
+        System.out.println("recording video");
+    }
+
+    // Implement WiFi methods
+    public String[] getNetworks() {
+        System.out.println("Getting list of network");
+        String[] networkList = {"vinay", "prajapati"}; // example networks
+        return networkList;
+    }
+    public void connectToNetwork(String network) {
+        System.out.println(" connecting to " + network);
+    }
+}
+
+// Main class
+public class defaultMethods {
+    public static void main(String[] args) {
+        mySmartPhone ms = new mySmartPhone(); // create smartphone object
+
+        ms.record4kVideo(); // call default method from mycamera
+
+        String[] ar = ms.getNetworks(); // get list of networks
+        for (String item: ar) { // print each network
+            System.out.println(item);
+        }
+
+        // ms.greet(); // ❌ ERROR: greet() is private in interface
+    }
+}
