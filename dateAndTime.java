@@ -1,4 +1,5 @@
 package endOfJava;
+import java.util.*;
 
 public class dateAndTime {
     public static void main(String[] args) {
@@ -20,6 +21,9 @@ public class dateAndTime {
         
         // This prints the approximate number of years passed since 1970
         System.out.println(System.currentTimeMillis() / 1000 / 3600 / 24 / 365);
+
+         Date d = new Date();          // Creates a Date object with the current date/time
+        System.out.println(d);        // Prints the date in default toString() format
     }
 }
 
@@ -27,4 +31,9 @@ public class dateAndTime {
 output
   55 -> in 2025
 This means it’s been approximately 55 years since January 1, 1970.
+
+and 
+
+Wed Aug 13 18:40:25 IST 2025
+
 */
